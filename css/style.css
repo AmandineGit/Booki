@@ -1,28 +1,78 @@
 /****** General ***********/
-* {
-    font-family: 'Raleway', sans-serif;
-}
-
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
 .fa-solid {
     color: var(--main-color);
 }
 
-body {
-    display: flex;
-    justify-content: center;
-}
-
-.main-container {
+.body-container {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
     box-sizing: border-box;
+}
+
+/************** Header **************/
+.header-container {
+    display:flex;
+    justify-content: space-between; 
+    align-items: center;/* Centre verticalement les éléments */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    margin-top : 10px;
+    margin-bottom: 30px; /* Centre le header et ajoute une marge inférieure */
+    height: 70px; /* Hauteur fixe du header */
+    padding: 0; /* Ajustez selon vos besoins */
+}
+
+.header-container img {
+    height: 20px; /* Hauteur fixe */
+    width: auto; /* Largeur ajustée automatiquement */
+}
+
+.nav-links {
+    list-style: none; /* Supprime les puces de la liste */
+    display: flex; /* Active Flexbox */
+    align-self: flex-end; /* Aligne les éléments en haut */
+    gap: 20px; /* Espacement entre les éléments */
+    height: 60px; /* Hauteur fixe du header */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+}
+
+.nav-links li a {
+    padding-top: 10px; /* Réduit l'espace au-dessus du texte */
+}
+
+.nav-links li a.active {
+    color: var(--main-color); 
+    border-top: 2px solid var(--main-color); 
+}
+
+.nav-links li a:hover {
+    color: var(--main-color); /* Couleur du texte pour le lien actif */
+    border-top: 2px solid var(--main-color);  /* Couleur bleue de la barre */
+}
+
+.nav-links:hover a.active:not(:hover) {
+    color: #333333; /* Restaure la couleur du texte par défaut */
+    border-top: none; /* Supprime la barre bleue */
+}
+
+/************** Main **************/
+
+.main-container {
+    margin-top: 0px;
 }
 
 a {
@@ -121,9 +171,6 @@ a {
     margin-bottom: 5px;
 }
 
-
-
-
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -163,5 +210,64 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    
+    .body-container {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        max-width: none; /* Supprime la limitation de largeur */
+        height: auto; /* La hauteur s'adapte */
+        margin: 0px; /* Centre le header et supprime la marge inférieure */
+    }
+
+    .header-container img {
+        padding-top : 30px;
+        padding-bottom : 30px;
+    }
+
+    .nav {
+        width : 100%;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: space-around; /* Centre les liens horizontalement */
+        width: 100%; /* Assure que la liste prend toute la largeur du nav */
+        padding: 0; /* Supprime les paddings supplémentaires */
+        margin: 0; /* Supprime les marges supplémentaires */
+        gap: 0px; /* Supprime l'espacement entre les éléments */
+    }
+
+    .nav-links li {
+        flex: 1;                     /* Chaque lien prend une part égale */
+    }
+
+    .nav-links li a {
+        display: block; /* Permet à l'élément de prendre toute la largeur disponible */
+        text-align: center; /* Centre le texte à l'intérieur de chaque lien */
+        padding: 10px 0; /* Ajuste le padding pour une meilleure lisibilité */
+        border-top: none; /* Supprime la bordure supérieure par défaut */
+        border-bottom: 2px solid transparent; /* Préserve l'espace pour la bordure inférieure */
+    }
+
+    .nav-links li a.active {
+        border-bottom: 2px solid var(--main-color); 
+        border-top: none; /* Supprime la bordure supérieure */
+    }
+    
+    .nav-links li a:hover {
+        border-bottom: 2px solid var(--main-color);   /* Couleur bleue de la barre */
+        border-top: none; /* Supprime la bordure supérieure */
+    }
+    
+    .nav-links:hover a.active:not(:hover) {
+        border-bottom: none; /* Supprime la barre bleue */
+    }
 }
