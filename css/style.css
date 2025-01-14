@@ -146,6 +146,12 @@ body {
     background-color: rgba(0, 101, 252, 0.8); /* Change la couleur au survol */
 }
 
+/* Styles pour l'icône */
+.button-icon {
+    display: none; /* Masqué par défaut */
+    font-size: 18px;
+}
+
 /************** Main **************/
 
 .main-container {
@@ -347,4 +353,13 @@ a {
     .nav-links:hover a.active:not(:hover) {
         border-bottom: none; /* Supprime la barre bleue */
     }
+
+    .button-text {
+        display: none; /* Masque le texte sur les petits écrans */
+    }
+
+    .button-icon {
+        display: inline-block; /* Affiche l'icône sur les petits écrans */
+    }
+
 }
