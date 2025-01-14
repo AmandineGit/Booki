@@ -69,6 +69,83 @@ body {
     border-top: none; /* Supprime la barre bleue */
 }
 
+.search-bar {
+    display: flex;
+    justify-content: center; /* Centre la liste horizontalement */
+    box-sizing: border-box;
+
+    border-radius: 10px; /* Angles arrondis */
+    max-width: 400px; /* Limite la largeur maximale */
+    margin-top: 30px ; /* Ajoute une marge haute */
+    margin-bottom: 40px ; /* Ajoute une marge basse */
+    color:black; /* Couleur de la bordure */
+    border: 10px; /* Taille de la bordure */
+} 
+
+.search-bar ul {
+    display: flex;
+    list-style: none; /* Supprime les puces de la liste */
+    align-items: center; /* Centre verticalement les éléments */
+    gap: 10px; /* Espacement entre les éléments */
+    padding: 0;
+    margin: 0;
+
+} 
+
+
+.search-bar input {
+    border: none; /* Supprime la bordure par défaut */
+    background-color: transparent; /* Fond transparent */
+    width: 100%; /* Prend toute la largeur disponible */
+}
+
+.search-bar ul li:first-child {
+    background-color: #F2F2F2; /* Couleur de fond gris */
+    border-radius: 10px 0 0 10px; /* Arrondit uniquement les coins gauches */
+    padding:  20px; /* Espace intérieur de l'élément */
+}
+
+.search-bar ul li:first-child i {
+    font-size: 1.2em; /* Taille de l'icône */
+    color: #333; /* Couleur noire pour l'icône */
+}
+
+.search-bar ul li:nth-child(2) {
+    background-color: #ffffff; /* Couleur de fond blanche */
+}
+
+.search-bar ul li:nth-child(2) input {
+    width: 100%; /* Prend toute la largeur de l'élément parent */
+    border: none; /* Supprime les bordures par défaut */
+    padding: 0 20px 0 0; /* Espace intérieur du champ */
+    font-size: 1em; /* Taille de la police */
+    font-weight: bold; /* Rend le texte en gras */
+    border-radius: 0; /* Pas d'arrondi pour correspondre à la barre */
+    outline: none; /* Supprime le contour au focus */
+}
+
+.search-bar ul li:last-child {
+    background-color: #0065FC; /* Couleur de fond bleue */
+    border-radius: 0 10px 10px 0; /* Arrondit uniquement les coins gauches */
+    padding: 20px; /* Espace intérieur de l'élément */
+}
+
+.search-bar ul li:last-child button {
+    border: none; /* Supprime les bordures par défaut */
+    background: none; /* Supprime le fond par défaut */
+    cursor: pointer; /* Change le curseur au survol */
+    color: #fff; /* Couleur blanche pour l'icône du bouton */
+    font-size: 1.2em; /* Taille de l'icône */
+    font-weight: bold; /* Rend le texte en gras */
+    outline: none; /* Supprime le contour au focus */
+    border-radius: 0 10px 10px 0; /* Arrondit uniquement les coins droits */
+    transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
+}
+
+.search-bar ul li:last-child button:hover {
+    background-color: rgba(0, 101, 252, 0.8); /* Change la couleur au survol */
+}
+
 /************** Main **************/
 
 .main-container {
@@ -246,7 +323,7 @@ a {
     }
 
     .nav-links li {
-        flex: 1;                     /* Chaque lien prend une part égale */
+        flex: 1; /* Chaque lien prend une part égale */
     }
 
     .nav-links li a {
