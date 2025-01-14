@@ -73,11 +73,10 @@ body {
     display: flex;
     justify-content: center; /* Centre la liste horizontalement */
     box-sizing: border-box;
-
     border-radius: 10px; /* Angles arrondis */
     max-width: 400px; /* Limite la largeur maximale */
     margin-top: 30px ; /* Ajoute une marge haute */
-    margin-bottom: 40px ; /* Ajoute une marge basse */
+    margin-bottom: 10px ; /* Ajoute une marge basse */
     color:black; /* Couleur de la bordure */
     border: 10px; /* Taille de la bordure */
 } 
@@ -91,7 +90,6 @@ body {
     margin: 0;
 
 } 
-
 
 .search-bar input {
     border: none; /* Supprime la bordure par défaut */
@@ -147,11 +145,61 @@ body {
 }
 
 /* Styles pour l'icône */
-.button-icon {
+.search-bar-button-icon {
     display: none; /* Masqué par défaut */
     font-size: 18px;
 }
 
+.search-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-filters ul {
+    display: flex;
+    flex-wrap: wrap ; /* Permet le retour à la ligne des éléments */
+    gap: 10px;
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 20px 0px 20px 0 ; /* Supprime les paddings par défaut */
+}
+
+.search-filters ul li:first-child {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 10px; /* Espace intérieur de l'élément */
+}
+
+.search-filters li:not(.exclu) {
+    display: flex;
+    gap: 20px;
+    padding: 10px; /* Espace intérieur de l'élément */
+    border: solid 2px #d9d9d9; /* Couleur de la bordure grise*/
+    border-radius: 25px; /* Angles arrondis */
+    list-style: none; /* Supprime les puces de la liste */
+}
+
+.search-filters li .button-icon {
+    font-size: 32px;
+}
+
+.search-filters li button {
+    display: flex;
+    align-items: center; /* Centre verticalement les éléments */
+    border: none;
+    background-color: transparent;
+    gap: 10px;
+}
+
+.filters-text-button {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.filters-button-icon {
+    font-size: 20px;
+}  
 /************** Main **************/
 
 .main-container {
@@ -354,12 +402,22 @@ a {
         border-bottom: none; /* Supprime la barre bleue */
     }
 
-    .button-text {
+    .search-bar-button-text {
         display: none; /* Masque le texte sur les petits écrans */
     }
 
-    .button-icon {
+    .search-bar-button-icon {
         display: inline-block; /* Affiche l'icône sur les petits écrans */
+    }
+
+    .search-filters li {
+        justify-content: space-around; /* Centre les éléments horizontalement */
+        width: 40%; /* Prend toute la largeur disponible */
+    }
+        
+    .search-filters ul li:first-child {
+        flex-basis: 100%; /* Appliquer flex-basis pour prendre toute la largeur */
+        justify-content: flex-start; /* Aligner à gauche */
     }
 
 }
