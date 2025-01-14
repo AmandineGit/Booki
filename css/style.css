@@ -192,6 +192,10 @@ body {
     gap: 10px;
 }
 
+.search-filters ul :hover {
+    background-color: var(--filter-bg-color);
+}
+
 .filters-text-button {
     font-size: 15px;
     font-weight: 600;
@@ -414,7 +418,7 @@ a {
         justify-content: space-around; /* Centre les éléments horizontalement */
         width: 40%; /* Prend toute la largeur disponible */
     }
-        
+
     .search-filters ul li:first-child {
         flex-basis: 100%; /* Appliquer flex-basis pour prendre toute la largeur */
         justify-content: flex-start; /* Aligner à gauche */
