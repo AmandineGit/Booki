@@ -192,7 +192,7 @@ body {
     gap: 10px;
 }
 
-.search-filters ul :hover {
+.search-filters ul li:not(:first-child):hover {
     background-color: var(--filter-bg-color);
 }
 
