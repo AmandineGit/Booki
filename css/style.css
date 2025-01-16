@@ -88,7 +88,11 @@ body {
     gap: 10px; /* Espacement entre les éléments */
     padding: 0;
     margin: 0;
-
+    border-radius: 10px; /* Angles arrondis */
+    border-width: 2px; /* Taille de la bordure */
+    border-color: var(--main-bg-color); /* Couleur de la bordure */
+    border-style: solid; /* Style de la bordure */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
 } 
 
 .search-bar input {
@@ -99,8 +103,11 @@ body {
 
 .search-bar ul li:first-child {
     background-color: #F2F2F2; /* Couleur de fond gris */
+    border-width: 2px; /* Taille de la bordure */
+    border-color: var(--main-bg-color); /* Couleur de la bordure */
     border-radius: 10px 0 0 10px; /* Arrondit uniquement les coins gauches */
-    padding:  20px; /* Espace intérieur de l'élément */
+    padding:  21.5px; /* Espace intérieur de l'élément */
+    box-sizing: content-box; /* Inclut le padding dans la largeur */
 }
 
 .search-bar ul li:first-child i {
@@ -126,6 +133,7 @@ body {
     background-color: #0065FC; /* Couleur de fond bleue */
     border-radius: 0 10px 10px 0; /* Arrondit uniquement les coins gauches */
     padding: 20px; /* Espace intérieur de l'élément */
+    box-sizing: content-box; /* Inclut le padding dans la largeur */
 }
 
 .search-bar ul li:last-child button {
