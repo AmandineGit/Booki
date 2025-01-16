@@ -85,7 +85,6 @@ a {
     display: flex;
     justify-content: center; /* Centre la liste horizontalement */
     box-sizing: border-box;
-    border-radius: 10px; /* Angles arrondis */
     max-width: 400px; /* Limite la largeur maximale */
     margin-top: 30px ; /* Ajoute une marge haute */
     margin-bottom: 10px ; /* Ajoute une marge basse */
@@ -100,7 +99,7 @@ a {
     gap: 10px; /* Espacement entre les éléments */
     padding: 0;
     margin: 0;
-    border-radius: 10px; /* Angles arrondis */
+    border-radius: 20px; /* Angles arrondis */
     border-width: 2px; /* Taille de la bordure */
     border-color: var(--main-bg-color); /* Couleur de la bordure */
     border-style: solid; /* Style de la bordure */
@@ -117,7 +116,7 @@ a {
     background-color: #F2F2F2; /* Couleur de fond gris */
     border-width: 2px; /* Taille de la bordure */
     border-color: var(--main-bg-color); /* Couleur de la bordure */
-    border-radius: 10px 0 0 10px; /* Arrondit uniquement les coins gauches */
+    border-radius: 20px 0 0 20px; /* Arrondit uniquement les coins gauches */
     padding:  21.5px; /* Espace intérieur de l'élément */
     box-sizing: content-box; /* Inclut le padding dans la largeur */
 }
@@ -143,7 +142,7 @@ a {
 
 .search-bar ul li:last-child {
     background-color: #0065FC; /* Couleur de fond bleue */
-    border-radius: 0 10px 10px 0; /* Arrondit uniquement les coins gauches */
+    border-radius: 0 20px 20px 0; /* Arrondit uniquement les coins gauches */
     padding: 20px; /* Espace intérieur de l'élément */
     box-sizing: content-box; /* Inclut le padding dans la largeur */
 }
@@ -156,7 +155,7 @@ a {
     font-size: 1.2em; /* Taille de l'icône */
     font-weight: bold; /* Rend le texte en gras */
     outline: none; /* Supprime le contour au focus */
-    border-radius: 0 10px 10px 0; /* Arrondit uniquement les coins droits */
+    border-radius: 0 20px 20px 0; /* Arrondit uniquement les coins droits */
     transition: background-color 0.3s ease; /* Transition pour l'effet de survol */
 }
 
@@ -225,6 +224,14 @@ a {
     font-size: 20px;
 }  
 
+.info-text {
+display: flex;
+align-items: flex-start;
+gap: 10px;
+margin-top: 20px;
+margin-bottom: 40px;
+}
+
 /****** Hebergements And Populaires ***********/
 .section-title {
     margin: 0;
@@ -253,21 +260,23 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
 }
 
 .hebergements-and-populaires section {
-    background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 30px;
+
     box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    padding: 30px;
+    background-color:var(--main-bg-color);
+    border-radius: 20px;
 }
 
 .hebergements-title {
@@ -319,7 +328,10 @@ a {
 
 /****** Populaires ***********/
 .populaires {
+    padding: 30px;
     width: 32%;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
 }
 
 .populaires-title {
@@ -408,9 +420,9 @@ a {
     }
 
     .main-container {
-        padding: 10px;
+        padding: 0px;
     }
-
+    /* Header */
     .header-container {
         flex-direction: column;
         max-width: none; /* Supprime la limitation de largeur */
@@ -462,6 +474,16 @@ a {
         border-bottom: none; /* Supprime la barre bleue */
     }
 
+    /* Main */
+    
+    .padding-container {
+        padding: 0 10px;
+    }
+
+    .info-text {
+        margin-bottom: 0px;
+    }
+    
     .search-bar-button-text {
         display: none; /* Masque le texte sur les petits écrans */
     }
@@ -478,6 +500,37 @@ a {
     .search-filters ul li:first-child {
         flex-basis: 100%; /* Appliquer flex-basis pour prendre toute la largeur */
         justify-content: flex-start; /* Aligner à gauche */
+    }
+
+    .search-bar ul li:last-child {
+        border-radius: 20px 20px 20px 20px; /* Arrondit uniquement les coins droits */
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements {
+        background-color: white;
+    }
+
+    .hebergements-cards {
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+
+    .populaires {
+        border-radius: 0px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .populaires-cards a {
+        width: 100%;
     }
 
 }
