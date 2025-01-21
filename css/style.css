@@ -271,24 +271,30 @@ margin-bottom: 40px;
     box-sizing: border-box;
 }
 
+.hebergements-and-populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.show-more {
+    font-size: 18px;
+}
+
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
     padding: 30px;
     background-color:var(--main-bg-color);
     border-radius: 20px;
-}
-
-.hebergements-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-bottom: 10px;
 }
 
 .hebergements-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
+    padding-bottom: 20px;
 }
 
 .hebergements-cards .card {
@@ -332,12 +338,6 @@ margin-bottom: 40px;
     width: 32%;
     background-color: var(--main-bg-color);
     border-radius: 20px;
-}
-
-.populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .populaires-cards .card {
@@ -385,6 +385,11 @@ margin-bottom: 40px;
 
     .hebergements {
         width: 100%;
+    }
+
+    .search-filters ul li:first-child {
+        flex-basis: 100%; /* Appliquer flex-basis pour prendre toute la largeur */
+        justify-content: flex-start; /* Aligner à gauche */
     }
 
     .populaires {
@@ -492,18 +497,23 @@ margin-bottom: 40px;
         display: inline-block; /* Affiche l'icône sur les petits écrans */
     }
 
+    .search-bar ul li:last-child {
+        border-radius: 20px 20px 20px 20px; /* Arrondit uniquement les coins droits */
+    }
+
     .search-filters li {
         justify-content: space-around; /* Centre les éléments horizontalement */
         width: 40%; /* Prend toute la largeur disponible */
     }
 
+    .search-filters ul {
+        padding-left: 0; /* Supprime le padding à gauche */
+        justify-content: center; /* Centre horizontalement */
+    }
+
     .search-filters ul li:first-child {
         flex-basis: 100%; /* Appliquer flex-basis pour prendre toute la largeur */
         justify-content: flex-start; /* Aligner à gauche */
-    }
-
-    .search-bar ul li:last-child {
-        border-radius: 20px 20px 20px 20px; /* Arrondit uniquement les coins droits */
     }
 
     .hebergements-and-populaires {
