@@ -413,6 +413,25 @@ margin-bottom: 40px;
     margin-bottom: 10px;
 }
 
+/****** Footer ***********/
+.footer-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: right;
+    background-color: var(--main-bg-color);
+    margin-top: 30px;
+}
+
+.footer-nav ul {
+    list-style: none;
+    width: 33%;
+    margin-top: 10px;
+}
+.footer-nav ul li {
+    margin-bottom: 10px;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -467,7 +486,11 @@ margin-bottom: 40px;
     }
 
     .activites-cards img {
-        height: 236px;
+        height: 136px;
+    }
+
+    .activites-cards .card-title {
+        font-size: 13px;
     }
 }
 
@@ -605,7 +628,20 @@ margin-bottom: 40px;
         padding-bottom: 20px;
     }
 
+    .activites-cards .card-title {
+        font-size: 14px;
+    }
+
     .card {
         margin: 0;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: right;
+    }
+
+    .footer-nav ul {
+        width: 100%;
     }
 }
